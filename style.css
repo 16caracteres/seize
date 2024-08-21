@@ -1,9 +1,132 @@
+@charset "UTF-8";
 /*
 Theme Name: Seize
-Theme URI: https://github.com/16caracteres/
+Theme URI: https://github.com/16caracteres/seize
 Author: 16 Caractères
 Author URI: https://16caracteres.com/
 Description: Thème pour le site 16caracteres.com
 Requires at least: WordPress 5.0
 Version: 1.0
 */
+:root {
+  --main-red-color: #E84616;
+  --sec-red-color: #F2A766;
+  --third-red-color:#D97F49;
+  --black-color: #000;
+  --darkblue-color: #346773;
+  --lightblue-color: #3CA1B9;
+  --text-color:#FFF;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(18, 51, 64) 0%, rgb(52, 103, 115) 100%);
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transform-origin: center;
+}
+
+ul, ol {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input, textarea, label {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ************************ FONTS ************************ */
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype"), url("assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype"), url("assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Abril Fatface";
+  src: url("assets/fonts/AbrilFatface-Regular.ttf") format("truetype"), url("assets/fonts/AbrilFatface-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+/* ************************ TEXT ************************ */
+body {
+  color: var(--text-color);
+  font-family: "Montserrat Regular";
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+h1 {
+  font-family: "Abril Fatface";
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Montserrat Bold";
+  font-size: 1.125rem;
+  letter-spacing: 5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.menu__burger {
+  display: none;
+}
+
+.menu__list-burger {
+  display: none;
+}
+
+header .header__logo .logo img {
+  height: 71px;
+  width: 92px;
+}
+header .menu {
+  font-family: "Montserrat Regular";
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
