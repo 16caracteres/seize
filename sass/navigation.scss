@@ -1,7 +1,53 @@
+/* HEADER */
+header {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+        .logo {
+            img {
+            height :71px;
+            width: 92px;
+            }
+        }
+    }
+    .menu {
+        font-family: 'Montserrat Regular';
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        .menu__list {
+            display: flex;
+            gap: 64px;
+        }
+    }    
+}
+
+/* **** */
 .menu__burger {
     display: none;
 }
 
 .menu__list-burger {
     display: none;
+}
+
+/* FOOTER */
+footer {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    .footer__menu {
+        display: flex;
+        gap: 56px;
+    }
+    p {
+        color: var(--lightblue-color);
+    }
 }
