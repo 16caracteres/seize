@@ -16,7 +16,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, rgba(18, 51, 64, 1) 0%,rgba(52, 103, 115, 1) 100%);
+    background: rgba(18,51,64,1);
+    background: linear-gradient(160deg, rgba(52,103,115,1) 0%, rgba(18,51,64,1) 32%, rgba(18,51,64,1) 88%, rgba(29,68,80,1) 100%); 
 }
 
 main {
@@ -109,6 +110,9 @@ h1 {
     font-family: 'Abril Fatface';
     font-size: 4rem;
     line-height: 1.2;
+    @media (max-width:640px) { 
+        font-size: 2.1rem;
+    }
 }
 
 h2 {

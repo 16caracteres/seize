@@ -57,21 +57,34 @@
         </div>
     </section>
 
-    <section id="parcours" class="experiences__sections">
+    <section id="parcours" class="experiences__section">
         <h2>Parcours</h2>
-        <div>
-            <?php the_field( 'experience_1' ); ?>
-            <?php the_field( 'experience_2' ); ?>
-            <?php the_field( 'experience_3' ); ?>
-            <?php the_field( 'experience_4' ); ?>
+        <div class="experiences__list">
+            <div class="experiences__item">
+                <?php echo wp_kses_post( get_field('experience_1') ); ?>
+            </div>
+            <div class="experiences__item">
+                <?php echo wp_kses_post( get_field('experience_2') ); ?>
+            </div>
+            <div class="experiences__item">
+                <?php echo wp_kses_post( get_field('experience_3') ); ?>
+            </div>
+            <div class="experiences__item">
+                <?php echo wp_kses_post( get_field('experience_4') ); ?>
+            </div>
         </div>
+        <a href="<?php echo wp_kses_post( get_field('curriculum-vitae') ); ?>" class="text__link">
+            Voir mon CV
+        </a>
     </section>
 
     <section id="contact" class="contact__section">
         <h2>Contact</h2>
-        <?php
-        echo do_shortcode('[contact-form-7 id="bd32bf8" title="Formulaire de contact 1"]');
-        ?>
+        <div class="contact__form">
+            <?php
+            echo do_shortcode('[contact-form-7 id="bd32bf8" title="Formulaire de contact 1"]');
+            ?>
+        </div>
     </section>
 </main>
 

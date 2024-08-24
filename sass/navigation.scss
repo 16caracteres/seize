@@ -43,9 +43,19 @@ footer {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 5px;
+
+    @media (max-width:640px) { 
+        flex-direction: column;
+        gap: 24px;
+    }
     .footer__menu {
         display: flex;
         gap: 56px;
+        @media (max-width:640px) { 
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
     }
     p {
         color: var(--lightblue-color);
