@@ -56,6 +56,10 @@ footer {
             align-items: center;
             gap: 24px;
         }
+        li a {
+            font-family: 'Montserrat Regular';
+            font-weight: 500;
+        }
     }
     p {
         color: var(--lightblue-color);

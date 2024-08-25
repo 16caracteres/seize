@@ -14,8 +14,8 @@
             <?php 
                 $competences = get_terms( array(
                     'taxonomy' => 'competences',
-                    'orderby' => 'id', // ou 'name', 'id', etc.
-                    'order' => 'ASC', // 'DESC' pour un ordre décroissant
+                    'orderby' => 'id', 
+                    'order' => 'ASC',
                     'hide_empty' => false // pour afficher même les termes sans contenu associé
                 ));
 
