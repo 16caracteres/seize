@@ -43,10 +43,42 @@
                     }
                 ?>
             </div>
-            <div class="image__item-2"><img src="" alt=""></div>
-            <div class="image__item-3"><img src="" alt=""></div>
-            <div class="image__item-4"><img src="" alt=""></div>
-            <div class="links__item"></div>
+            <div class="image__item-2">
+                <?php
+                    $image_id = get_field( 'image_2' );
+                    if( $image_id ) {	
+                        echo wp_get_attachment_image( $image_id, 'full' );
+                    }
+                ?>
+            </div>
+            <div class="image__item-3">
+                    <?php
+                        $image_id = get_field( 'image_3' );
+                        if( $image_id ) {	
+                            echo wp_get_attachment_image( $image_id, 'full' );
+                        }
+                    ?>
+                </div>
+            <div class="image__item-4">
+                <?php
+                    $image_id = get_field( 'image_4' );
+                    if( $image_id ) {	
+                        echo wp_get_attachment_image( $image_id, 'full' );
+                    }
+                ?>
+            </div>
+            <div class="links__item">
+                <?php
+                    $github = get_field( 'lien_github' );
+                    if( $github ) {	
+                        echo '<a href="' . $github . '" class="text__link"> Github</a>';
+                    }
+                    $site = get_field( 'lien_site' );
+                    if( $site ) {	
+                        echo '<a href="' . $site . '" class="text__link"> Site</a>';
+                    }
+                ?>
+            </div>
         </div>
     </section>
 </main>

@@ -11,5 +11,7 @@
             <p class="footer__copyright">©16 Caractères · 2024</p>
         </footer>
 
+        <?php get_template_part( 'parts/lightbox' );  ?>
+
     </body>
 </html>
