@@ -35,7 +35,7 @@
 
     <section class="gallery__section">
         <div class="gallery__grid">
-            <div class="image__item-1">
+            <div class="image__item item-1">
                 <?php
                     $image_id = get_field( 'image_1' );
                     if( $image_id ) {	
@@ -43,7 +43,7 @@
                     }
                 ?>
             </div>
-            <div class="image__item-2">
+            <div class="image__item item-2">
                 <?php
                     $image_id = get_field( 'image_2' );
                     if( $image_id ) {	
@@ -51,7 +51,7 @@
                     }
                 ?>
             </div>
-            <div class="image__item-3">
+            <div class="image__item item-3">
                     <?php
                         $image_id = get_field( 'image_3' );
                         if( $image_id ) {	
@@ -59,7 +59,7 @@
                         }
                     ?>
                 </div>
-            <div class="image__item-4">
+            <div class="image__item item-4">
                 <?php
                     $image_id = get_field( 'image_4' );
                     if( $image_id ) {	

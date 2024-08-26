@@ -206,7 +206,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(18, 51, 64, 0.8);
   opacity: 0;
   transition: opacity 500ms ease 0s, visibility 0ms linear 500ms;
 }
@@ -220,9 +220,9 @@ footer p {
   z-index: 25;
   top: 55px;
   right: 52px;
-  width: 23px;
-  height: 23px;
-  background: url("assets/images/lightbox_close.svg") center center/100% 100% no-repeat;
+  width: 16px;
+  height: 16px;
+  background: url("assets/img/SVG/lightbox_close.svg") center center/100% 100% no-repeat;
 }
 .lightbox .lightbox__next, .lightbox .lightbox__prev {
   position: fixed;
@@ -231,26 +231,26 @@ footer p {
   margin-top: -35px;
   width: 107px;
   height: 70px;
-  background: url("assets/images/lightbox_right.svg") right center/27px 16px no-repeat;
-  color: var(--bg-color);
+  background: url("assets/img/SVG/lightbox_right.svg") right center/27px 16px no-repeat;
+  color: var(--text-color);
   line-height: 1;
   transition: text-shadow 500ms ease-in-out;
 }
 .lightbox .lightbox__next:hover, .lightbox .lightbox__prev:hover {
-  text-shadow: 0 0 0.65px var(--bg-color), 0 0 0.65px var(--bg-color);
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 .lightbox .lightbox__next {
   right: 0;
-  margin-right: 20px;
+  margin-right: 32px;
   padding-right: 40px;
 }
 .lightbox .lightbox__prev {
-  margin-left: 20px;
+  margin-left: 32px;
   padding-left: 40px;
-  background: url("assets/images/lightbox_left.svg") left center/27px 16px no-repeat;
+  background: url("assets/img/SVG/lightbox_left.svg") left center/27px 16px no-repeat;
 }
 .lightbox button {
-  opacity: 0.6;
+  opacity: 0.7;
   transition: opacity 500ms ease;
 }
 .lightbox button:hover {
@@ -261,8 +261,8 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px auto;
-  max-width: 1080px;
+  margin: 0 auto;
+  max-width: 1600px;
   min-height: 100vh;
 }
 .lightbox .lightbox__photo-info .lightbox__photo img {
@@ -275,7 +275,7 @@ footer p {
   justify-content: space-between;
   width: 100%;
   margin: 20px 140px 0 140px;
-  color: var(--bg-color);
+  color: var(--text-color);
 }
 .lightbox .lightbox__photo-info .lightbox__info .lightbox__info-title {
   font-family: "Poppins Light";
@@ -318,24 +318,24 @@ a {
   letter-spacing: 5px;
 }
 
-.home__section, .presentation__section {
+.home__section, .presentation__section, .page__section {
   margin-top: 130px;
 }
-.home__section h1, .presentation__section h1 {
+.home__section h1, .presentation__section h1, .page__section h1 {
   margin-bottom: 24px;
 }
-.home__section h2, .presentation__section h2 {
+.home__section h2, .presentation__section h2, .page__section h2 {
   margin-bottom: 40px;
 }
-.home__section p, .presentation__section p {
+.home__section p, .presentation__section p, .page__section p {
   width: 80%;
 }
 @media (max-width: 640px) {
-  .home__section p, .presentation__section p {
+  .home__section p, .presentation__section p, .page__section p {
     width: 100%;
   }
 }
-.home__section .skills__list, .presentation__section .skills__list {
+.home__section .skills__list, .presentation__section .skills__list, .page__section .skills__list {
   margin-top: 48px;
   font-family: "Montserrat Bold";
   font-size: 0.75rem;
@@ -343,28 +343,28 @@ a {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-.home__section .skills__list ul, .presentation__section .skills__list ul {
+.home__section .skills__list ul, .presentation__section .skills__list ul, .page__section .skills__list ul {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
-.home__section .skills__list ul li, .presentation__section .skills__list ul li {
+.home__section .skills__list ul li, .presentation__section .skills__list ul li, .page__section .skills__list ul li {
   padding: 8px 47px;
   height: 18px;
   border-radius: 25px;
 }
-.home__section .skills__list ul li:nth-child(1), .presentation__section .skills__list ul li:nth-child(1) {
+.home__section .skills__list ul li:nth-child(1), .presentation__section .skills__list ul li:nth-child(1), .page__section .skills__list ul li:nth-child(1) {
   background-color: var(--main-red-color);
 }
-.home__section .skills__list ul li:nth-child(2), .presentation__section .skills__list ul li:nth-child(2) {
+.home__section .skills__list ul li:nth-child(2), .presentation__section .skills__list ul li:nth-child(2), .page__section .skills__list ul li:nth-child(2) {
   background-color: var(--sec-red-color);
   color: var(--black-color);
 }
-.home__section .skills__list ul li:nth-child(3), .presentation__section .skills__list ul li:nth-child(3) {
+.home__section .skills__list ul li:nth-child(3), .presentation__section .skills__list ul li:nth-child(3), .page__section .skills__list ul li:nth-child(3) {
   background-color: var(--third-red-color);
   color: var(--black-color);
 }
-.home__section .skills__list ul li:nth-child(4), .presentation__section .skills__list ul li:nth-child(4) {
+.home__section .skills__list ul li:nth-child(4), .presentation__section .skills__list ul li:nth-child(4), .page__section .skills__list ul li:nth-child(4) {
   background-color: var(--lightblue-color);
 }
 
@@ -600,19 +600,22 @@ a {
   width: 100%;
   height: 100%;
 }
-.gallery__section .gallery__grid .image__item-1 {
+.gallery__section .gallery__grid .image__item {
+  cursor: pointer;
+}
+.gallery__section .gallery__grid .item-1 {
   grid-column: 1/3;
   grid-row: 1/3;
 }
-.gallery__section .gallery__grid .image__item-2 {
+.gallery__section .gallery__grid .item-2 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.gallery__section .gallery__grid .image__item-3 {
+.gallery__section .gallery__grid .item-3 {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.gallery__section .gallery__grid .image__item-4 {
+.gallery__section .gallery__grid .item-4 {
   grid-column: 2/4;
   grid-row: 3/4;
 }
@@ -628,6 +631,30 @@ a {
 .gallery__section .gallery__grid .links__item .text__link {
   padding-right: 32px;
   background: url("assets/img/SVG/arrow_link.svg") 95% 60% no-repeat;
+}
+
+/* PAGE */
+.page__section {
+  width: 80%;
+}
+@media (max-width: 640px) {
+  .page__section {
+    width: 100%;
+  }
+}
+.page__section p {
+  margin-bottom: 16px;
+}
+.page__section p, .page__section a {
+  text-transform: none;
+  font-family: "Montserrat Regular";
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+.page__section p strong, .page__section a strong {
+  font-family: "Montserrat Bold";
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
