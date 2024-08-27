@@ -14,17 +14,25 @@ function seize_assets() {
     // Déclarer jQuery et autres bibliothèques
     wp_enqueue_script('jquery');
 
-    // Déclarer ton script avec jQuery comme dépendance
+    wp_enqueue_script( 
+        'seize_script', 
+        get_template_directory_uri() . '/js/script.js', 
+        array( 'jquery' ), 
+        '1.0', 
+        true
+    );
+
     wp_enqueue_script( 
         'seize_lightbox', 
         get_template_directory_uri() . '/js/lightbox.js', 
         array( 'jquery' ), 
         '1.0', 
-        true // Le dernier argument est pour placer le script dans le footer (true pour footer, false pour header)
+        true
     );
 
     // Ajouter l'attribut "defer" au script
     wp_script_add_data( 'seize_lightbox', 'defer', true );
+    wp_script_add_data( 'seize_script', 'defer', true );
 
     // Déclarer les fichiers de style
     wp_enqueue_style( 

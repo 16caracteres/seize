@@ -114,6 +114,9 @@ a {
                     border-radius: 25px;
                     filter: blur(5px);
                     transition: all 440ms;
+                    @media (max-width:1024px) {
+                        filter: blur(0); 
+                    }
                         &:hover{
                             filter: blur(0);
                         }
