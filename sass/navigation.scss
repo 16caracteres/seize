@@ -21,6 +21,11 @@ header {
             display: flex;
             gap: 64px;
         }
+        .retour {
+            padding-left: 32px;
+            background: url('assets/img/SVG/arrow_left.svg') 5% 60% no-repeat;
+            //height: 16px;
+        }
     }    
 }
 

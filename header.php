@@ -20,22 +20,31 @@
         
         
         <nav class="menu">
-            <?php
-                wp_nav_menu([
-                    'theme_location' => 'main-menu',
-                    'container' => 'ul',
-                    'menu_class' => 'menu__list',
-                    ]);
+            <?php 
+                if ( is_front_page() ) { 
+                
+                    wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'container' => 'ul',
+                        'menu_class' => 'menu__list',
+                        ]);
+                    
+                    //Menu burger
+                    echo '<button class="menu__burger"></button>';
+                    
+                    wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'container' => 'ul',
+                        'menu_class' => 'menu__list-burger',
+                        ]);
+                
+                } else { 
+                    ?>
+                        <a href=" <?php echo home_url( '/' ) ?>" class="retour">Retour</a>
+                    <?php 
+                }
             ?>
-            <!-- Menu burger -->
-            <button class="menu__burger"></button>
-            <?php
-                wp_nav_menu([
-                    'theme_location' => 'main-menu',
-                    'container' => 'ul',
-                    'menu_class' => 'menu__list-burger',
-                    ]);
-            ?>
+            
         </nav>
 
     </header>

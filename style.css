@@ -152,6 +152,10 @@ header .menu .menu__list {
   display: flex;
   gap: 64px;
 }
+header .menu .retour {
+  padding-left: 32px;
+  background: url("assets/img/SVG/arrow_left.svg") 5% 60% no-repeat;
+}
 
 /* **** */
 .menu__burger {
@@ -465,7 +469,6 @@ a {
 .experiences__section .text__link {
   padding-right: 32px;
   background: url("assets/img/SVG/arrow_link.svg") 95% 60% no-repeat;
-  height: 16px;
 }
 
 .contact__section .contact__form {
