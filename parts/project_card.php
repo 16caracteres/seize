@@ -7,7 +7,6 @@
         ?>
     </a>
     <div class="project__tags">
-        <?php //the_terms( get_the_ID() , 'competences' ); ?>
         <?php
             $terms = get_the_terms( $post->ID, 'competences' );
 

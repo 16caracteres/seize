@@ -14,17 +14,25 @@ function seize_assets() {
     // Déclarer jQuery et autres bibliothèques
     wp_enqueue_script('jquery');
 
+    wp_enqueue_script( // Swup
+        'swup', 
+        'https://unpkg.com/swup@4', 
+        false, 
+        '4.0', 
+        true 
+    );
+
     wp_enqueue_script( 
-        'seize_script', 
-        get_template_directory_uri() . '/js/script.js', 
+        'seize_lightbox', 
+        get_template_directory_uri() . '/js/lightbox.js', 
         array( 'jquery' ), 
         '1.0', 
         true
     );
 
     wp_enqueue_script( 
-        'seize_lightbox', 
-        get_template_directory_uri() . '/js/lightbox.js', 
+        'seize_script', 
+        get_template_directory_uri() . '/js/script.js', 
         array( 'jquery' ), 
         '1.0', 
         true

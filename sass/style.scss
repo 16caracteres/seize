@@ -11,9 +11,9 @@ Version: 1.0
 @import "base.scss";
 @import "navigation.scss";
 @import "lightbox.scss";
+@import "animations.scss";
 
-
-
+/* ********************** */
 
 body {
     margin : 0 8vw;
@@ -189,6 +189,10 @@ a {
     .text__link {
         padding-right: 32px;
         background: url('assets/img/SVG/arrow_link.svg') 95% 60% no-repeat;
+        transition : text-shadow 300ms ease-in-out;
+        &:hover {
+            text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
+        }
     }
 }
 
@@ -357,7 +361,10 @@ a {
             .text__link {
                 padding-right: 32px;
                 background: url('assets/img/SVG/arrow_link.svg') 95% 60% no-repeat;
-                //height: 16px;
+                transition : text-shadow 300ms ease-in-out;
+                &:hover {
+                    text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
+                }
             }
         }
     }

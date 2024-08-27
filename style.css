@@ -175,13 +175,13 @@ header .menu .menu__list {
     display: none;
   }
 }
-header .menu .retour {
-  padding-left: 32px;
-  background: url("assets/img/SVG/arrow_left.svg") 5% 60% no-repeat;
-}
 header .menu a {
   position: relative;
   padding-bottom: 2px;
+  transition: text-shadow 300ms ease-in-out;
+}
+header .menu a:hover {
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 header .menu a::before {
   content: "";
@@ -198,6 +198,22 @@ header .menu a::before {
 header .menu a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+header .menu .retour {
+  padding-bottom: 0;
+  padding-left: 32px;
+  background: url("assets/img/SVG/arrow_left.svg") 5% 60% no-repeat;
+  transition: text-shadow 300ms ease-in-out;
+}
+header .menu .retour:hover {
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
+}
+header .menu .retour::before {
+  content: none;
+  transition: none;
+}
+header .menu .retour:hover::before {
+  transition: none;
 }
 
 /* **** */
@@ -283,7 +299,7 @@ footer .footer__menu li a {
   transition: all 300ms ease-in-out;
 }
 footer .footer__menu li a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 footer p {
   color: var(--lightblue-color);
@@ -359,6 +375,59 @@ footer p {
   height: auto;
 }
 
+/* Define a transition duration during page visits *
+html.is-changing .transition-fade {   
+    transition: opacity 0.25s;   opacity: 1; 
+} 
+
+/* Define the styles for the unloaded pages  
+html.is-animating .transition-fade {   
+    opacity: 0; 
+} */
+/* ----- */
+/* Slightly move main content */
+html.is-changing .transition-main {
+  transition: transform 500ms ease-in-out;
+}
+
+html.is-animating.is-leaving .transition-main {
+  transform: translateY(calc(5vh * var(--overlay-direction, 1)));
+}
+
+html.is-animating.is-rendering .transition-main {
+  transform: translateY(calc(-5vh * var(--overlay-direction, 1)));
+}
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: var(--clearblue-color) url("assets/img/SVG/logo_dark.svg") center center no-repeat;
+  opacity: 0;
+  transform: translate3d(0, calc(-100% * var(--overlay-direction, 1)), 0);
+  pointer-events: none;
+}
+
+html.is-changing .transition-overlay {
+  transition: transform 500ms ease-in-out;
+  opacity: 1;
+}
+
+html.is-animating .transition-overlay {
+  transform: translate3d(0, 0, 0);
+}
+
+html.is-rendering .transition-overlay {
+  transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
+}
+
+/*html.to-back {
+  /* --overlay-direction: -1; 
+} */
+/* ********************** */
 body {
   margin: 0 8vw;
   display: flex;
@@ -538,6 +607,10 @@ a {
 .experiences__section .text__link {
   padding-right: 32px;
   background: url("assets/img/SVG/arrow_link.svg") 95% 60% no-repeat;
+  transition: text-shadow 300ms ease-in-out;
+}
+.experiences__section .text__link:hover {
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 
 .contact__section .contact__form {
@@ -703,6 +776,10 @@ a {
 .gallery__section .gallery__grid .links__item .text__link {
   padding-right: 32px;
   background: url("assets/img/SVG/arrow_link.svg") 95% 60% no-repeat;
+  transition: text-shadow 300ms ease-in-out;
+}
+.gallery__section .gallery__grid .links__item .text__link:hover {
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 
 /* PAGE */

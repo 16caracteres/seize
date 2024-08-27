@@ -18,3 +18,9 @@ menuLink.forEach((link) => {
         document.body.classList.remove("no-scroll");
     })
 });
+
+
+// Transition Swup 
+const swup = new Swup( {
+    containers: ["#swup"]
+});

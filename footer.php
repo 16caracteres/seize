@@ -1,4 +1,6 @@
-        <?php wp_footer(); ?>
+<div class="overlay transition-overlay"></div>
+
+<?php wp_footer(); ?>
 
         <footer class="footer">
             <?php
