@@ -374,7 +374,7 @@ footer p {
   max-width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: opacity 800ms ease;
 }
 .lightbox .lightbox__photo-info .lightbox__photo img.fade-in {
   opacity: 1;

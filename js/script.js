@@ -21,6 +21,6 @@ menuLink.forEach((link) => {
 
 
 // Transition Swup 
-const swup = new Swup( {
+/*const swup = new Swup( {
     containers: ["#swup"]
-});
+});*/
