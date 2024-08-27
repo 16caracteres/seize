@@ -16,6 +16,11 @@ html, body {
     padding: 0;
 }
 
+html {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
 body {
     background: rgba(18,51,64,1);
     background: linear-gradient(160deg, rgba(52,103,115,1) 0%, rgba(18,51,64,1) 32%, rgba(18,51,64,1) 88%, rgba(29,68,80,1) 100%); 

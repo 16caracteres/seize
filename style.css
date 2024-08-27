@@ -25,6 +25,11 @@ html, body {
   padding: 0;
 }
 
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(18, 51, 64);
   background: linear-gradient(160deg, rgb(52, 103, 115) 0%, rgb(18, 51, 64) 32%, rgb(18, 51, 64) 88%, rgb(29, 68, 80) 100%);
@@ -174,6 +179,26 @@ header .menu .retour {
   padding-left: 32px;
   background: url("assets/img/SVG/arrow_left.svg") 5% 60% no-repeat;
 }
+header .menu a {
+  position: relative;
+  padding-bottom: 2px;
+}
+header .menu a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--lightblue-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+header .menu a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 
 /* **** */
 .menu__burger {
@@ -255,6 +280,10 @@ footer .footer__menu {
 footer .footer__menu li a {
   font-family: "Montserrat Regular";
   font-weight: 500;
+  transition: all 300ms ease-in-out;
+}
+footer .footer__menu li a:hover {
+  opacity: 0.8;
 }
 footer p {
   color: var(--lightblue-color);
@@ -296,11 +325,8 @@ footer p {
   height: 70px;
   background: url("assets/img/SVG/lightbox_right.svg") right center/27px 16px no-repeat;
   color: var(--text-color);
+  cursor: pointer;
   line-height: 1;
-  transition: text-shadow 500ms ease-in-out;
-}
-.lightbox .lightbox__next:hover, .lightbox .lightbox__prev:hover {
-  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 .lightbox .lightbox__next {
   right: 0;
@@ -331,27 +357,6 @@ footer p {
 .lightbox .lightbox__photo-info .lightbox__photo img {
   max-width: 100%;
   height: auto;
-}
-.lightbox .lightbox__photo-info .lightbox__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin: 20px 140px 0 140px;
-  color: var(--text-color);
-}
-.lightbox .lightbox__photo-info .lightbox__info .lightbox__info-title {
-  font-family: "Poppins Light";
-  font-size: 0.875rem;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.lightbox .lightbox__photo-info .lightbox__info .lightbox__info-cat {
-  font-family: "Space Mono Regular";
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
 }
 
 body {
@@ -456,7 +461,7 @@ a {
   height: 100%;
   border-radius: 25px;
   filter: blur(5px);
-  transition: all 440ms;
+  transition: all 500ms;
 }
 @media (max-width: 1024px) {
   .projects__section .projects__list .project__card .project__image img {

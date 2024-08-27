@@ -34,11 +34,8 @@
         height: 70px;
         background: url('assets/img/SVG/lightbox_right.svg') right center / 27px 16px no-repeat;
         color: var(--text-color);
+        cursor: pointer;
         line-height: 1;
-        transition : text-shadow 500ms ease-in-out;
-        &:hover {
-            text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
-        }
     }
     .lightbox__next {
         right: 0;
@@ -69,27 +66,6 @@
             img {
                 max-width: 100%;
                 height: auto;
-            }
-        }
-        .lightbox__info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            margin: 20px 140px 0 140px;
-            color: var(--text-color);
-            .lightbox__info-title {
-                font-family: 'Poppins Light';
-                font-size: 0.875rem;
-                font-weight: 300;
-                text-transform: uppercase;
-            }
-            .lightbox__info-cat {
-                font-family: 'Space Mono Regular';
-                font-size: 0.875rem;
-                font-weight: 400;
-                text-transform: uppercase;
-                letter-spacing: 1.4px;
             }
         }
     }
