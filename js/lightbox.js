@@ -39,7 +39,17 @@ function initLightbox() {
         // Création d'une variable qui contiendra la balise de l'image en cours
         const imageLightbox = document.createElement("img");
         imageLightbox.src = image.imageURL;
+
+        // Ajouter la classe pour le fade-in
+        //imageLightbox.classList.add('fade-in');
+
+        // Attendre un petit délai pour démarrer l'animation
+        setTimeout(() => {
+            imageLightbox.classList.add('fade-in');
+        }, 50);
+
         lightboxPhoto.appendChild(imageLightbox);
+
         // Annule scroll du body
         bodyScrollLock.disableBodyScroll(lightbox);
     }

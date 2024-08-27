@@ -65,6 +65,11 @@
             img {
                 max-width: 100%;
                 height: auto;
+                opacity: 0;
+                transition: opacity 500ms ease;
+                &.fade-in {
+                    opacity: 1;
+                }
             }
         }
     }

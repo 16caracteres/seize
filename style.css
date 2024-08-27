@@ -373,6 +373,11 @@ footer p {
 .lightbox .lightbox__photo-info .lightbox__photo img {
   max-width: 100%;
   height: auto;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.lightbox .lightbox__photo-info .lightbox__photo img.fade-in {
+  opacity: 1;
 }
 
 /* Define a transition duration during page visits *
@@ -724,6 +729,7 @@ a {
 
 .gallery__section {
   width: 83%;
+  margin-bottom: 140px;
 }
 @media (max-width: 640px) {
   .gallery__section {
