@@ -27,7 +27,8 @@ main {
 }
 
 section {
-    margin-bottom: 140px;
+    margin-bottom: 40px;
+    padding-top: 100px;
 }
 
 h2 {
@@ -187,8 +188,10 @@ a {
         }
     }
     .text__link {
+        display: block;
         padding-right: 32px;
-        background: url('assets/img/SVG/arrow_link.svg') 95% 60% no-repeat;
+        background: url('assets/img/SVG/arrow_link.svg') 9rem 0 no-repeat;
+        background-size: 19px;
         transition : text-shadow 300ms ease-in-out;
         &:hover {
             text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
@@ -197,6 +200,7 @@ a {
 }
 
 .contact__section {
+    margin-bottom: 140px;
     .contact__form {
         width: 50%;
         @media (max-width:1024px) { 
@@ -265,6 +269,10 @@ a {
 /* PAGE PROJET */
 
 .presentation__section {
+    strong {
+        font-family: 'Montserrat Bold';
+        font-weight: 700;
+    }
     .skills__project {
         margin-top: 48px;
         font-family: 'Montserrat Bold';
@@ -359,8 +367,10 @@ a {
             justify-content: center;
             align-items: center;
             .text__link {
+                display: block;
                 padding-right: 32px;
-                background: url('assets/img/SVG/arrow_link.svg') 95% 60% no-repeat;
+                background: url('assets/img/SVG/arrow_link.svg') 5rem 0 no-repeat;
+                background-size: 19px;
                 transition : text-shadow 300ms ease-in-out;
                 &:hover {
                     text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);

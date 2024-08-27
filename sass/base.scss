@@ -28,6 +28,7 @@ body {
 
 main {
     flex: 1;
+    min-height: calc(100vh - 195px);
 }
 
 h1, h2, h3, h4, h5, h6, p {

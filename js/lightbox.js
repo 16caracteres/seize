@@ -15,11 +15,9 @@ function initLightbox() {
 
     // Pour chaque photo affichée, on implémente les valeurs de chacune d'elles dans la variable gallery
     imageGallery = document.querySelectorAll('.image__item');
-    console.log(imageGallery);
     imageGallery.forEach((item, index) => {
         const imageLink = item.querySelector('.image__item img');
-        console.log(imageLink);
-        
+
         // Implémente les valeurs récupérées sur chaque image dans la variable tableau gallery
         gallery.push({
             imageURL: imageLink.getAttribute('src'),
@@ -43,7 +41,7 @@ function initLightbox() {
         imageLightbox.src = image.imageURL;
         lightboxPhoto.appendChild(imageLightbox);
         // Annule scroll du body
-        //bodyScrollLock.disableBodyScroll(lightbox);
+        bodyScrollLock.disableBodyScroll(lightbox);
     }
 
     // Evènement au clic sur le bouton Fermer qui supprimera la classe "visible" de la Lightbox

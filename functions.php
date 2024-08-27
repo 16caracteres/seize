@@ -23,6 +23,14 @@ function seize_assets() {
     );
 
     wp_enqueue_script( 
+        'block-scroll-lock-js', 
+        get_template_directory_uri() . '/js/libraries/body-scroll-lock.js', 
+        array( 'jquery' ), 
+        '4.0.0', 
+        true
+    );
+
+    wp_enqueue_script( 
         'seize_lightbox', 
         get_template_directory_uri() . '/js/lightbox.js', 
         array( 'jquery' ), 
