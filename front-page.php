@@ -80,11 +80,19 @@
 
     <section id="contact" class="contact__section">
         <h2>Contact</h2>
-        <div class="contact__form">
-            <?php
-            echo do_shortcode('[contact-form-7 id="bd32bf8" title="Formulaire de contact 1"]');
-            ?>
+        <div class="contact__content">
+            <div class="contact__form">
+                <?php
+                echo do_shortcode('[contact-form-7 id="bd32bf8" title="Formulaire de contact 1"]');
+                ?>
+            </div>
+
+            <div class="contact__text">
+                <?php the_field( 'texte_contact' ); ?>
+            </div>
         </div>
+        
+        
     </section>
 </main>
 

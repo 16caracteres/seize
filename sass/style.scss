@@ -201,65 +201,81 @@ a {
 
 .contact__section {
     margin-bottom: 140px;
-    .contact__form {
-        width: 50%;
+    .contact__content {
+        display: flex;
+        gap: 32px;
         @media (max-width:1024px) { 
-            width: 83%;
+            flex-direction: column-reverse;
         }
-        @media (max-width:640px) { 
-            width: 100%;
-        }
-        form { //container
-            //height: 292px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 32px;
-            input, textarea {
-                width: calc(100% - 18px);
-                display: inline-block;
-                padding-left: 18px;
-                box-sizing: content-box;
-                border: 1px solid var(--text-color);
-                border-radius: 20px;
-                background-color: rgba(52,103,115,0.2) ;
-                color: var(--text-color);
-                font-family: 'Montserrat Regular';
-                font-size: 1rem;
+        .contact__form {
+            width: 50%;
+            @media (max-width:1024px) { 
+                width: 83%;
             }
-            input {
-                height: 50px;
-                &[type=submit] {
-                    padding-left: 0;
+            @media (max-width:640px) { 
+                width: 100%;
+            }
+            form { //container
+                //height: 292px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 32px;
+                input, textarea {
+                    width: calc(100% - 18px);
+                    display: inline-block;
+                    padding-left: 18px;
+                    box-sizing: content-box;
+                    border: 1px solid var(--text-color);
+                    border-radius: 20px;
+                    background-color: rgba(52,103,115,0.2) ;
+                    color: var(--text-color);
+                    font-family: 'Montserrat Regular';
+                    font-size: 1rem;
+                }
+                input {
+                    height: 50px;
+                    &[type=submit] {
+                        padding-left: 0;
+                        width: 100%;
+                        background-color: var(--lightblue-color);
+                        border: none;
+                        font-size: 0.75rem;
+                        font-family: 'Montserrat Bold';
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                    }
+                }
+                textarea {
+                    padding-top: 18px;
+                    //height: 210px;
+                }
+                p label, p label span {
                     width: 100%;
-                    background-color: var(--lightblue-color);
+                    display: inline-block;
+                }
+                // Error messages
+                .wpcf7-response-output, .wpcf7 form.invalid {
+                    margin: 0 18px;
+                    padding: 0;
                     border: none;
                     font-size: 0.75rem;
-                    font-family: 'Montserrat Bold';
-                    letter-spacing: 5px;
-                    text-transform: uppercase;
-                    cursor: pointer;
+                }
+                .wpcf7-not-valid-tip {
+                    color: var(--main-red-color);
+                    font-size: 0.75rem;
+                    margin-left: 18px;
                 }
             }
-            textarea {
-                padding-top: 18px;
-                //height: 210px;
+        }
+        .contact__text {
+            width: 30%;
+            @media (max-width:1024px) { 
+                width: 83%;
             }
-            p label, p label span {
+            @media (max-width:640px) { 
                 width: 100%;
-                display: inline-block;
-            }
-            // Error messages
-            .wpcf7-response-output, .wpcf7 form.invalid {
-                margin: 0 18px;
-                padding: 0;
-                border: none;
-                font-size: 0.75rem;
-            }
-            .wpcf7-not-valid-tip {
-                color: var(--main-red-color);
-                font-size: 0.75rem;
-                margin-left: 18px;
             }
         }
     }
