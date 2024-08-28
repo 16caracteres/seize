@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="swup" class="transition-main">
+<main>
     <section class="presentation__section">
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
             
@@ -71,11 +71,14 @@
                 <?php
                     $github = get_field( 'lien_github' );
                     if( $github ) {	
-                        echo '<a href="' . $github . '" class="text__link"> Github</a>';
+                        echo '<a href="' . $github . '" class="text__link" target="_blank"> Github</a>';
                     }
                     $site = get_field( 'lien_site' );
                     if( $site ) {	
-                        echo '<a href="' . $site . '" class="text__link"> Site</a>';
+                        echo '<a href="' . $site . '" class="text__link link__site" target="_blank"> Site</a>';
+                    }
+                    else {
+                        echo '<a href="' . $site . '" class="" target="_blank">En savoir +</a>';
                     }
                 ?>
             </div>

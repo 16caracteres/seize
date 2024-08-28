@@ -380,59 +380,35 @@ footer p {
   opacity: 1;
 }
 
-/* Define a transition duration during page visits *
-html.is-changing .transition-fade {   
-    transition: opacity 0.25s;   opacity: 1; 
-} 
-
-/* Define the styles for the unloaded pages  
-html.is-animating .transition-fade {   
-    opacity: 0; 
-} */
-/* ----- */
-/* Slightly move main content */
-html.is-changing .transition-main {
-  transition: transform 500ms ease-in-out;
-}
-
-html.is-animating.is-leaving .transition-main {
-  transform: translateY(calc(5vh * var(--overlay-direction, 1)));
-}
-
-html.is-animating.is-rendering .transition-main {
-  transform: translateY(calc(-5vh * var(--overlay-direction, 1)));
-}
-
-.transition-overlay {
+.page-transition {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
-  background: var(--clearblue-color) url("assets/img/SVG/logo_dark.svg") center center no-repeat;
-  background-size: 92px 71px;
+  z-index: 1616;
+  background-color: var(--clearblue-color);
   opacity: 0;
-  transform: translate3d(0, calc(-100% * var(--overlay-direction, 1)), 0);
   pointer-events: none;
+  transition: 300ms ease-in-out;
+  display: flex;
+  font-size: 50px;
+  font-weight: 700;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-html.is-changing .transition-overlay {
-  transition: transform 500ms ease-in-out;
+.page-transition img {
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.page-transition.is-active {
+  pointer-events: all;
   opacity: 1;
 }
 
-html.is-animating .transition-overlay {
-  transform: translate3d(0, 0, 0);
-}
-
-html.is-rendering .transition-overlay {
-  transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
-}
-
-/*html.to-back {
-  /* --overlay-direction: -1; 
-} */
 /* ********************** */
 body {
   margin: 0 8vw;
@@ -797,6 +773,9 @@ a {
   background-size: 19px;
   transition: text-shadow 300ms ease-in-out;
 }
+.gallery__section .gallery__grid .links__item .text__link.link__site {
+  background: url("assets/img/SVG/arrow_link.svg") 3rem 0 no-repeat;
+}
 .gallery__section .gallery__grid .links__item .text__link:hover {
   text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
@@ -804,6 +783,7 @@ a {
 /* PAGE */
 .page__section {
   width: 80%;
+  margin-bottom: 140px;
 }
 @media (max-width: 640px) {
   .page__section {

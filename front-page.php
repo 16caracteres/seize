@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="swup" class="transition-main">
+<main>
     <section id="accueil" class="home__section">
 
         <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>    

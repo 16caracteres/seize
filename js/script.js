@@ -1,3 +1,37 @@
+// Transition Page 
+window.onload = () => {
+    const anchors = document.querySelectorAll("a:not(.text__link, .menu__list li a, .footer__menu #menu-item-6 a, .footer__menu #menu-item-7 a)");
+    const transition_el = document.querySelector(".page-transition");
+    setTimeout(() => {
+      transition_el.classList.remove("is-active");
+    }, 300); // On retire la classe .is-active
+
+    console.log(anchors);
+    console.log(transition_el);
+    
+    for (let i = 0; i < anchors.length; i++) {
+      const anchor = anchors[i];
+      anchor.addEventListener("click", (e) => {
+        if (e.ctrlKey) {
+        } else {
+          e.preventDefault();
+          let target = e.currentTarget.href;
+          console.log(transition_el);
+          transition_el.classList.add("is-active");
+          if (target == null) {
+            setTimeout(() => {
+              window.location.href = "https://16caracteres.com";
+            }, 300);
+          } else {
+            setTimeout(() => {
+              window.location.href = target;
+            }, 300);
+          }
+        }
+      });
+    }
+  };
+
 // Menu Burger
 const body = document.body;
 const boutonBurger = document.querySelector('.menu__burger');
@@ -20,7 +54,3 @@ menuLink.forEach((link) => {
 });
 
 
-// Transition Swup 
-/*const swup = new Swup( {
-    containers: ["#swup"]
-});*/

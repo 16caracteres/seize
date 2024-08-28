@@ -10,6 +10,7 @@
 <body <?php body_class(); ?>>
     
     <?php wp_body_open(); ?>
+    <div class="page-transition is-active"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/SVG/logo_dark.svg" alt="Logo Transition"></div>
 
     <header class="header">
         <div class="header__logo">

@@ -373,6 +373,9 @@ a {
                 background: url('assets/img/SVG/arrow_link.svg') 5rem 0 no-repeat;
                 background-size: 19px;
                 transition : text-shadow 300ms ease-in-out;
+                &.link__site {
+                    background: url('assets/img/SVG/arrow_link.svg') 3rem 0 no-repeat;
+                }
                 &:hover {
                     text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
                 }
@@ -385,6 +388,7 @@ a {
 
 .page__section {
     width: 80%;
+    margin-bottom: 140px;
     @media (max-width:640px) { 
         width: 100%;
     }
