@@ -676,6 +676,9 @@ a {
 .contact__section .contact__content .contact__text {
   width: 30%;
 }
+.contact__section .contact__content .contact__text strong {
+  font-family: "Montserrat Bold";
+}
 @media (max-width: 1024px) {
   .contact__section .contact__content .contact__text {
     width: 83%;
@@ -797,6 +800,10 @@ a {
 }
 .gallery__section .gallery__grid .links__item .text__link.link__site {
   background: url("assets/img/SVG/arrow_link.svg") 3rem 0 no-repeat;
+}
+.gallery__section .gallery__grid .links__item .text__link.link__other {
+  background: none;
+  padding: 0;
 }
 .gallery__section .gallery__grid .links__item .text__link:hover {
   text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);

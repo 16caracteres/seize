@@ -77,8 +77,9 @@
                     if( $site ) {	
                         echo '<a href="' . $site . '" class="text__link link__site" target="_blank"> Site</a>';
                     }
-                    else {
-                        echo '<a href="' . $site . '" class="" target="_blank">En savoir +</a>';
+                    $autre = get_field( 'lien_autre' );
+                    if( $autre ) {
+                        echo '<a href="' . $autre . '" class="text__link link__other" target="_blank">En savoir +</a>';
                     }
                 ?>
             </div>

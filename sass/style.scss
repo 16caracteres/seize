@@ -271,6 +271,9 @@ a {
         }
         .contact__text {
             width: 30%;
+            strong {
+                font-family: 'Montserrat Bold';
+            }
             @media (max-width:1024px) { 
                 width: 83%;
             }
@@ -391,6 +394,10 @@ a {
                 transition : text-shadow 300ms ease-in-out;
                 &.link__site {
                     background: url('assets/img/SVG/arrow_link.svg') 3rem 0 no-repeat;
+                }
+                &.link__other {
+                    background: none;
+                    padding: 0;
                 }
                 &:hover {
                     text-shadow: 0 0 .65px var(--text-color), 0 0 .65px var(--text-color);
