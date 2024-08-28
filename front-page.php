@@ -61,16 +61,16 @@
         <h2>Parcours</h2>
         <div class="experiences__list">
             <div class="experiences__item">
-                <?php echo wp_kses_post( get_field('experience_1') ); ?>
+                <?php echo wp_kses_post( get_field('experience_1', false, true, true) ); ?>
             </div>
             <div class="experiences__item">
-                <?php echo wp_kses_post( get_field('experience_2') ); ?>
+                <?php echo wp_kses_post( get_field('experience_2', false, true, true) ); ?>
             </div>
             <div class="experiences__item">
-                <?php echo wp_kses_post( get_field('experience_3') ); ?>
+                <?php echo wp_kses_post( get_field('experience_3', false, true, true) ); ?>
             </div>
             <div class="experiences__item">
-                <?php echo wp_kses_post( get_field('experience_4') ); ?>
+                <?php echo wp_kses_post( get_field('experience_4', false, true, true) ); ?>
             </div>
         </div>
         <a href="<?php echo wp_kses_post( get_field('curriculum-vitae') ); ?>" class="text__link">
