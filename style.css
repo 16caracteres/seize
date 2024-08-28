@@ -679,7 +679,7 @@ a {
   font-size: 0.75rem;
 }
 .contact__section .contact__content .contact__form form .wpcf7-not-valid-tip {
-  color: var(--main-red-color);
+  color: var(--sec-red-color);
   font-size: 0.75rem;
   margin-left: 18px;
 }
