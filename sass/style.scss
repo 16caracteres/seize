@@ -366,6 +366,11 @@ a {
         }
         .image__item {
             cursor: pointer;
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
+            &:hover {
+                opacity: 0.8;
+            }
         }
         .item-1 {
             grid-column: 1/3;

@@ -1,6 +1,6 @@
 // Transition Page 
 window.onload = () => {
-    const anchors = document.querySelectorAll("a:not(.text__link, .menu__list li a, .footer__menu #menu-item-6 a, .footer__menu #menu-item-7 a)");
+    const anchors = document.querySelectorAll("a:not(.text__link, .menu__list li a, .menu__list-burger li a, .footer__menu #menu-item-6 a, .footer__menu #menu-item-7 a)");
     const transition_el = document.querySelector(".page-transition");
     setTimeout(() => {
       transition_el.classList.remove("is-active");

@@ -367,7 +367,7 @@ footer p {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 80%;
   min-height: 100vh;
 }
 .lightbox .lightbox__photo-info .lightbox__photo img {
@@ -378,6 +378,11 @@ footer p {
 }
 .lightbox .lightbox__photo-info .lightbox__photo img.fade-in {
   opacity: 1;
+}
+@media (max-width: 1024px) {
+  .lightbox .lightbox__photo-info .lightbox__photo img {
+    margin-top: 5px;
+  }
 }
 
 .page-transition {
@@ -770,6 +775,11 @@ a {
 }
 .gallery__section .gallery__grid .image__item {
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.gallery__section .gallery__grid .image__item:hover {
+  opacity: 0.8;
 }
 .gallery__section .gallery__grid .item-1 {
   grid-column: 1/3;
