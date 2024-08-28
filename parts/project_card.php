@@ -11,6 +11,14 @@
             $terms = get_the_terms( $post->ID, 'competences' );
 
             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+
+                // Ordre personnalisé des slugs
+                $order = array( 'wordpress', 'integration', 'javascript', 'ui-design' );
+
+                usort( $terms, function( $a, $b ) use ( $order ) {
+                    return array_search( $a->slug, $order ) - array_search( $b->slug, $order );
+                });
+
                 echo '<ul>';
                 foreach ( $terms as $term ) {
                     echo '<li class="' . esc_attr( $term->slug ) . '">' . esc_html( $term->name ) . '</li>';

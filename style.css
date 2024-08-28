@@ -649,11 +649,16 @@ a {
   width: 100%;
   background-color: var(--lightblue-color);
   border: none;
+  cursor: pointer;
   font-size: 0.75rem;
   font-family: "Montserrat Bold";
   letter-spacing: 5px;
   text-transform: uppercase;
-  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.contact__section .contact__content .contact__form form input[type=submit]:hover {
+  background-color: var(--clearblue-color);
+  color: var(--darkblue-color);
 }
 .contact__section .contact__content .contact__form form textarea {
   padding-top: 18px;

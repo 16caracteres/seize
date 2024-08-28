@@ -73,9 +73,15 @@
                 <?php echo wp_kses_post( get_field('experience_4', false, true, true) ); ?>
             </div>
         </div>
-        <a href="<?php echo wp_kses_post( get_field('curriculum-vitae') ); ?>" class="text__link">
-            Voir mon CV
-        </a>
+
+        <div>
+            <?php
+                $file = get_field('curriculum_vitae');
+                if( $file ) { 
+                    echo '<a href="' . $file['url'] . '" class="text__link" target="_blank">Voir mon CV</a>';
+                }
+                ?>
+        </div>
     </section>
 
     <section id="contact" class="contact__section">

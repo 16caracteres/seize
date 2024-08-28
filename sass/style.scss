@@ -240,11 +240,17 @@ a {
                         width: 100%;
                         background-color: var(--lightblue-color);
                         border: none;
+                        cursor: pointer;
+
                         font-size: 0.75rem;
                         font-family: 'Montserrat Bold';
                         letter-spacing: 5px;
                         text-transform: uppercase;
-                        cursor: pointer;
+                        transition: all 300ms ease-in-out;
+                        &:hover {
+                            background-color: var(--clearblue-color);
+                            color: var(--darkblue-color);
+                        }
                     }
                 }
                 textarea {
