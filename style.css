@@ -672,15 +672,16 @@ a {
   width: 100%;
   display: inline-block;
 }
-.contact__section .contact__content .contact__form form .wpcf7-response-output, .contact__section .contact__content .contact__form form .wpcf7 form.invalid {
+.contact__section .contact__content .contact__form form .wpcf7-response-output, .contact__section .contact__content .contact__form form .wpcf7 form.invalid, .contact__section .contact__content .contact__form form .wpcf7-not-valid-tip {
   margin: 0 18px;
   padding: 0;
   border: none;
+  font-family: "Montserrat Bold";
   font-size: 0.75rem;
+  letter-spacing: 1px;
 }
 .contact__section .contact__content .contact__form form .wpcf7-not-valid-tip {
   color: var(--sec-red-color);
-  font-size: 0.75rem;
   margin-left: 18px;
 }
 .contact__section .contact__content .contact__text {
