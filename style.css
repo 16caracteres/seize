@@ -850,5 +850,18 @@ a {
   font-family: "Montserrat Bold";
   font-weight: 700;
 }
+.page__section .text__link {
+  display: block;
+  padding-right: 32px;
+  background: url("assets/img/SVG/arrow_link.svg") 17rem 0 no-repeat;
+  background-size: 19px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: text-shadow 300ms ease-in-out;
+}
+.page__section .text__link:hover {
+  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
+}
 
 /*# sourceMappingURL=style.css.map */
