@@ -331,6 +331,7 @@ footer p {
   width: 16px;
   height: 16px;
   background: url("assets/img/SVG/lightbox_close.svg") center center/100% 100% no-repeat;
+  cursor: pointer;
 }
 .lightbox .lightbox__next, .lightbox .lightbox__prev {
   position: fixed;
@@ -341,8 +342,8 @@ footer p {
   height: 70px;
   background: url("assets/img/SVG/lightbox_right.svg") right center/27px 16px no-repeat;
   color: var(--text-color);
-  cursor: pointer;
   line-height: 1;
+  cursor: pointer;
 }
 .lightbox .lightbox__next {
   right: 0;
@@ -395,7 +396,7 @@ footer p {
   background-color: var(--clearblue-color);
   opacity: 0;
   pointer-events: none;
-  transition: 300ms ease-in-out;
+  transition: 300ms ease;
   display: flex;
   font-size: 50px;
   font-weight: 700;
@@ -405,7 +406,7 @@ footer p {
 }
 
 .page-transition img {
-  max-width: 160px;
+  max-width: 92px;
   margin: 0 auto;
 }
 

@@ -23,6 +23,7 @@
         width: 16px;
         height: 16px;
         background: url('assets/img/SVG/lightbox_close.svg') center center / 100% 100% no-repeat;
+        cursor: pointer;
     }
     .lightbox__next, .lightbox__prev {
         position: fixed;
@@ -33,8 +34,8 @@
         height: 70px;
         background: url('assets/img/SVG/lightbox_right.svg') right center / 27px 16px no-repeat;
         color: var(--text-color);
-        cursor: pointer;
         line-height: 1;
+        cursor: pointer;
     }
     .lightbox__next {
         right: 0;
