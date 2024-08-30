@@ -685,6 +685,26 @@ a {
   color: var(--sec-red-color);
   margin-left: 18px;
 }
+.contact__section .contact__content .contact__form form .captcha__content p {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .contact__section .contact__content .contact__form form .captcha__content p {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+.contact__section .contact__content .contact__form form .captcha__content p .label__captcha {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+.contact__section .contact__content .contact__form form .captcha__content p .wpcf7-captchac {
+  margin: 5px 0;
+}
 .contact__section .contact__content .contact__text {
   width: 30%;
 }
@@ -808,23 +828,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-.gallery__section .gallery__grid .links__item .text__link {
-  display: block;
-  padding-right: 32px;
-  background: url("assets/img/SVG/arrow_link.svg") 5rem 0 no-repeat;
-  background-size: 19px;
-  transition: text-shadow 300ms ease-in-out;
-}
-.gallery__section .gallery__grid .links__item .text__link.link__site {
-  background: url("assets/img/SVG/arrow_link.svg") 3rem 0 no-repeat;
-}
-.gallery__section .gallery__grid .links__item .text__link.link__other {
-  background: none;
-  padding: 0;
-}
-.gallery__section .gallery__grid .links__item .text__link:hover {
-  text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
-}
 
 /* PAGE */
 .page__section {
@@ -850,17 +853,26 @@ a {
   font-family: "Montserrat Bold";
   font-weight: 700;
 }
-.page__section .text__link {
+
+/* Liens text_link */
+.text__link {
   display: block;
   padding-right: 32px;
-  background: url("assets/img/SVG/arrow_link.svg") 17rem 0 no-repeat;
+  background: url("assets/img/SVG/arrow_link.svg") 5rem 0 no-repeat;
   background-size: 19px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
   transition: text-shadow 300ms ease-in-out;
 }
-.page__section .text__link:hover {
+.text__link.link__site {
+  background: url("assets/img/SVG/arrow_link.svg") 3rem 0 no-repeat;
+}
+.text__link.link__other {
+  background: none;
+  padding: 0;
+}
+.text__link.error__link {
+  background: url("assets/img/SVG/arrow_link.svg") 17rem 0 no-repeat;
+}
+.text__link:hover {
   text-shadow: 0 0 0.65px var(--text-color), 0 0 0.65px var(--text-color);
 }
 
